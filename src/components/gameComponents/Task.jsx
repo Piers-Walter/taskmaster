@@ -53,7 +53,7 @@ const Task = (props) => {
     actions.start();
     setPlayerStarted(true);
   };
-  const [timeLeft, actions] = useCountdown(5000, 1000);
+  const [timeLeft, actions] = useCountdown(30 * 1000, 1000);
 
   useEffect(() => {
     if (timeLeft == 0) {
