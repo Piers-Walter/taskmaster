@@ -6,7 +6,6 @@ import Game from "./Game";
 const Home = (props) => {
   return (
     <>
-      <CustomAppBar />
       <Game />
     </>
   );
