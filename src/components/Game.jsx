@@ -10,7 +10,7 @@ const Game = () => {
     started: false,
     questions: [],
     rounds: 4,
-    currentRound: -1,
+    currentRound: 1,
     playerCounter: 0,
   });
 

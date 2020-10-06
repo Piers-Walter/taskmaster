@@ -11,7 +11,7 @@ const CustomAppBar = (props) => {
           Taskmaster
         </Typography>
 
-        {props.gameState.currentRound > 0 && (
+        {props.gameState.started && (
           <Typography variant="h6" align="right">
             Round: {props.gameState.currentRound}/{props.gameState.rounds}
           </Typography>
