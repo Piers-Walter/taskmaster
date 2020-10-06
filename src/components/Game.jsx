@@ -41,7 +41,11 @@ const Game = () => {
         <SetupGame gameState={gameState} updateGameState={updateGameState} />
       )}
       {gameState.started && (
-        <Task gameState={gameState} updateGameState={updateGameState} />
+        <Task
+          gameState={gameState}
+          updateGameState={updateGameState}
+          style={{}}
+        />
       )}
     </>
   );

@@ -48,7 +48,7 @@ const SetupGame = (props) => {
 
     players.push({
       name: playerName,
-      colour: randomColour({ luminosity: "bright" }),
+      colour: randomColour({ luminosity: "light" }),
     });
 
     props.updateGameState({
@@ -178,6 +178,7 @@ const SetupGame = (props) => {
                         backgroundColor: player.colour,
                         display: "inline-flex",
                         marginRight: "10px",
+                        color: "black",
                       }}
                     >
                       {player.name[0]}
