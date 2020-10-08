@@ -3,6 +3,7 @@ import generateQuestions from "../helpers/generateQuestions";
 import CustomAppBar from "./CustomAppBar";
 import SetupGame from "./gameComponents/SetupGame";
 import Task from "./gameComponents/Task";
+import ScoreBoard from "./gameComponents/ScoreBoard";
 
 const Game = () => {
   const [gameState, setGameState] = useState({
@@ -23,14 +24,21 @@ const Game = () => {
     if (gameState.started) {
       //Load All Questions into gamestate in random order
       let generatedQuestions = generateQuestions();
-      updateGameState({ questions: generatedQuestions, currentRound: 1 });
+      updateGameState({
+        questions: generatedQuestions,
+        currentRound: 1,
+        scoreBoard: false,
+      });
     }
   }, [gameState.started]);
 
   //Count rounds and goes
   useEffect(() => {
     if (gameState.playerCounter % gameState.players.length === 0)
-      updateGameState({ currentRound: gameState.currentRound + 1 });
+      updateGameState({
+        //currentRound: gameState.currentRound + 1,
+        scoreBoard: true,
+      });
   }, [gameState.playerCounter]);
 
   return (
@@ -40,12 +48,16 @@ const Game = () => {
       {!gameState.started && (
         <SetupGame gameState={gameState} updateGameState={updateGameState} />
       )}
-      {gameState.started && (
+      {gameState.started && !gameState.scoreBoard && (
         <Task
           gameState={gameState}
           updateGameState={updateGameState}
           style={{}}
         />
+      )}
+
+      {gameState.started && gameState.scoreBoard && (
+        <ScoreBoard gameState={gameState} updateGameState={updateGameState} />
       )}
     </>
   );

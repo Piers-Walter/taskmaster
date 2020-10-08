@@ -30,7 +30,6 @@ const allQuestions = [
   "Ice cube in your mouth",
   "Make a Paper airplane",
   "Get Something made from Aluminium",
-  "Name 5 Restaurants in %CITY%",
   "Get a Cheese Grater",
   "Charades Round",
   "Do 10 Star Jumps",
