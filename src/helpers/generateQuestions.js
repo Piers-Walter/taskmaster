@@ -32,7 +32,6 @@ const allQuestions = [
     "Whistle/Hum a tune for us to guess",
     "Take out a light bulb and put it above your head",
     "Grab a Square of Toilet Paper",
-    "Ice cube in your mouth",
     "Make a Paper airplane",
     "Get Something made from Aluminium",
     "Get a Cheese Grater",
@@ -56,6 +55,8 @@ const allQuestions = [
     "Show Me Something Alive",
     "Tell a Joke",
     "Get a candle",
+    "Name 3 applications our team runs",
+    "Name 3 previous interns",
 ];
 
 const numberOfQuestions = allQuestions.length;
